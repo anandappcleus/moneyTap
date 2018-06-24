@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="izD-eP-ec4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GillSans.ttc">
+            <string>GillSans</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--SerachBarVC-->
+        <scene sceneID="MmV-jL-JNj">
+            <objects>
+                <viewController storyboardIdentifier="SerachBarVC" title="SerachBarVC" id="izD-eP-ec4" customClass="SerachBarVC" customModule="Moneytap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jaj-Ym-fEi"/>
+                        <viewControllerLayoutGuide type="bottom" id="hFh-OT-Ge2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F0X-j5-4zK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="5Iz-7i-3dm">
+                                <rect key="frame" x="8" y="36" width="359" height="56"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="izD-eP-ec4" id="cDy-Jk-Spv"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AYZ-FK-ful" userLabel="Search Results Table View">
+                                <rect key="frame" x="0.0" y="92" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchResultCell" rowHeight="95" id="aoZ-1B-lZ6" customClass="SearchResultCell" customModule="Moneytap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aoZ-1B-lZ6" id="hPe-ba-TeG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="anand" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccV-2V-Ay6">
+                                                    <rect key="frame" x="94" y="8" width="41" height="20"/>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUy-Pl-KGp">
+                                                    <rect key="frame" x="8" y="8" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="Nzp-hq-BLn"/>
+                                                        <constraint firstAttribute="height" constant="70" id="YT7-Vc-hS6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="anand.dsce91@gmail.com" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mt2-JC-c6x">
+                                                    <rect key="frame" x="94" y="38" width="273" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="4RK-kQ-O9x"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="ccV-2V-Ay6" firstAttribute="leading" secondItem="oUy-Pl-KGp" secondAttribute="trailing" constant="16" id="6cZ-g5-wBO"/>
+                                                <constraint firstAttribute="trailing" secondItem="mt2-JC-c6x" secondAttribute="trailing" constant="8" id="Kxe-r7-T4r"/>
+                                                <constraint firstItem="mt2-JC-c6x" firstAttribute="leading" secondItem="ccV-2V-Ay6" secondAttribute="leading" id="Y9K-t7-4Ky"/>
+                                                <constraint firstItem="oUy-Pl-KGp" firstAttribute="leading" secondItem="hPe-ba-TeG" secondAttribute="leading" constant="8" id="eva-Ot-oCS"/>
+                                                <constraint firstItem="ccV-2V-Ay6" firstAttribute="top" secondItem="oUy-Pl-KGp" secondAttribute="top" id="hKG-0d-V3L"/>
+                                                <constraint firstItem="mt2-JC-c6x" firstAttribute="top" secondItem="ccV-2V-Ay6" secondAttribute="bottom" constant="10" id="nbp-Ph-Xsw"/>
+                                                <constraint firstItem="oUy-Pl-KGp" firstAttribute="top" secondItem="hPe-ba-TeG" secondAttribute="top" constant="8" id="tgE-r1-jvz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="thumbnail" destination="oUy-Pl-KGp" id="brQ-uP-bbi"/>
+                                            <outlet property="title" destination="ccV-2V-Ay6" id="VUL-26-KIa"/>
+                                            <outlet property="value" destination="mt2-JC-c6x" id="9sy-iM-Lsi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="izD-eP-ec4" id="Yb0-qA-GZp"/>
+                                    <outlet property="delegate" destination="izD-eP-ec4" id="ITP-Al-1l3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AYZ-FK-ful" firstAttribute="leading" secondItem="F0X-j5-4zK" secondAttribute="leading" id="2rY-eo-FhZ"/>
+                            <constraint firstItem="hFh-OT-Ge2" firstAttribute="top" secondItem="AYZ-FK-ful" secondAttribute="bottom" constant="200" id="3dr-9Y-a5r"/>
+                            <constraint firstItem="5Iz-7i-3dm" firstAttribute="top" secondItem="jaj-Ym-fEi" secondAttribute="bottom" constant="16" id="M7d-CU-0Zh"/>
+                            <constraint firstItem="AYZ-FK-ful" firstAttribute="centerX" secondItem="5Iz-7i-3dm" secondAttribute="centerX" id="Pey-ec-CgV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Iz-7i-3dm" secondAttribute="trailing" constant="-8" id="ViR-T1-48s"/>
+                            <constraint firstItem="5Iz-7i-3dm" firstAttribute="leading" secondItem="F0X-j5-4zK" secondAttribute="leadingMargin" constant="-8" id="q3M-d0-ngm"/>
+                            <constraint firstItem="AYZ-FK-ful" firstAttribute="top" secondItem="5Iz-7i-3dm" secondAttribute="bottom" id="xqC-To-0DP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6ll-Hq-Myx"/>
+                    </view>
+                    <connections>
+                        <outlet property="SearchBar" destination="5Iz-7i-3dm" id="5oq-wN-b5B"/>
+                        <outlet property="searchResultsTableView" destination="AYZ-FK-ful" id="JMT-wh-dZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVW-Aq-hYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3844" y="259.52023988005999"/>
+        </scene>
+    </scenes>
+</document>
